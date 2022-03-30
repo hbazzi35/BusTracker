@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Map.css">
+    
+    <title>Bus Tracker</title>
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+    <div class="map-overlay top" style="width: 350px; height: 100px;">
+        <div>
+            <div>
+                
+                <center>
+                <button id="displayButton" onclick="displayMode();buttonEffect('displayButton')">Mode</button>
+                <h5>Navigation / Satelitte</h5></center>
+            </div>
+            <div id="runButtonDiv">
+                <button id="runButton" class='' onclick="toggleStatus();timer();buttonEffect('runButton')">Start</button>
+                <p><span id="refreshTimer"></span>Refresh</p>
+            </div>
+            <p>Updated: <span id="lastUpdated">Not Running</span></p>
+        </div>
+        <h6>Bus Lines</h6>
+        <ul id="list">
+        </ul>
+    </div>
+  
+    
+    <script src="Tracker.js"></script>
+</body>
+
+</html>
